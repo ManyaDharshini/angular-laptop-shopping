@@ -1,0 +1,8 @@
+.error img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 600px;
+    max-width: 100%;
+
+}

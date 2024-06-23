@@ -1,0 +1,108 @@
+.empty-orders{
+ padding: 7em;
+}
+.empty-orders img{
+  display: block;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 350px;
+  height: 350px;
+}
+.content{
+    text-align: center;
+  }
+  .empty-orders .content p{
+    text-align: center;
+    margin-top:20px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: rgb(66, 66, 66);
+  }
+  .empty-orders .content .order-button{
+    margin-bottom: 30px;
+  }
+  .empty-orders .content a{
+    padding: 0.6em;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #181E27;
+    color: #ffffff;
+    font-size: 17px;
+  }
+  .container{
+   padding: 3em;
+   margin: 50px;
+   margin-top: 90px;
+   border: 2px solid rgb(215, 215, 215);
+  }
+  .container h2{
+    margin-top: -18px;
+    padding-bottom: 15px;
+  }
+  .container h3{
+    padding-bottom: 5px;
+  }
+  .order {
+    margin-top: 18px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;    
+    border-radius: 10px;
+    width: 700px;
+  }
+  .center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .order-items{
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .order-item {
+    display: flex;
+    gap:70px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(178, 169, 169);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  .order-item img{
+    width: 80px;
+    height: 70px;
+    max-width: 100%;
+  }
+  .order-item .name{
+    width: 120px;
+  }
+  .status-cancel{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+  }
+  .status-cancel .cancel-order{
+    background-color: red;
+    color: #fff;
+    width: 80px;
+    padding: 0.3em;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .order-details{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+  }
+  .order-details h4{
+    padding-bottom: 7px;
+  }
+  .order-details ul li{
+    list-style: none;
+    height: 25px;
+    font-size: 16px;
+  }
+
+  
+  

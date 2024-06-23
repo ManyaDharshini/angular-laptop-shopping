@@ -1,0 +1,508 @@
+{
+  "admin": [
+    {
+      "username": "Admin",
+      "emailId": "admin@gmail.com",
+      "password": "Admin@123",
+      "id": 1
+    }
+  ],
+  "users": [
+    {
+      "username": "Manya",
+      "emailId": "manya@gmail.com",
+      "mobile": "7010502112",
+      "password": "Manya@123",
+      "confirmPassword": "Manya@123",
+      "id": 1
+    },
+    {
+      "username": "Riyashini",
+      "emailId": "riya@gmail.com",
+      "mobile": "9478463747",
+      "password": "Riya@123",
+      "confirmPassword": "Riya@123",
+      "id": 3
+    },
+    {
+      "username": "Megallan",
+      "emailId": "megallan@gmail.com",
+      "mobile": "9442841767",
+      "password": "megallan@123",
+      "confirmPassword": "megallan@123",
+      "id": 4
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "category": "Dell",
+      "image": "../assets/lap images/Dell inspiron 3511.jpg",
+      "model": "Dell inspiron 15 3511",
+      "price": "54,000",
+      "originalPrice": "60,000",
+      "ratings": 5
+    },
+    {
+      "id": 3,
+      "category": "Asus",
+      "image": "../assets/lap images/asus zen1.jpg",
+      "model": "Asus VivoBook ultra k14",
+      "price": "59,000",
+      "originalPrice": "63,000",
+      "ratings": 4
+    },
+    {
+      "id": 4,
+      "category": "Lenovo",
+      "image": "../assets/lap images/lenovo ideapad flex.jpg",
+      "model": "Lenovo IdeaPad Flex 5i",
+      "price": "67,000",
+      "originalPrice": "72,490",
+      "ratings": 4
+    },
+    {
+      "id": 5,
+      "category": "HP",
+      "image": "../assets/lap images/hp pavilion15.jpg",
+      "model": "HP Pavillion Laptop 15",
+      "price": "65,500",
+      "originalPrice": "69,600",
+      "ratings": 3
+    },
+    {
+      "id": 6,
+      "category": "Dell",
+      "image": "../assets/lap images/dell inspiron 15.jpg",
+      "model": "Dell Inspiron 15",
+      "price": "63,950",
+      "originalPrice": "67,900",
+      "ratings": 4
+    },
+    {
+      "id": 7,
+      "category": "Acer",
+      "image": "../assets/lap images/Acer 22.jpg",
+      "model": "Acer 22",
+      "price": "43,000",
+      "originalPrice": "51,900",
+      "ratings": 3
+    },
+    {
+      "id": 8,
+      "category": "Macbook",
+      "image": "../assets/lap images/Macbook pro 22.jpg",
+      "model": "Macbook pro 22",
+      "price": "2,45,599",
+      "originalPrice": "2,50,000",
+      "ratings": 5
+    },
+    {
+      "id": 9,
+      "category": "Lenovo",
+      "image": "../assets/lap images/lenovo am2647.jpg",
+      "model": "Lenovo AM 2647",
+      "price": "1,05,000",
+      "originalPrice": "1,11,000",
+      "ratings": 4
+    },
+    {
+      "id": 10,
+      "category": "Acer",
+      "image": "../assets/lap images/Acer pro 2647.jpg",
+      "model": "Acer pro 2647",
+      "price": "42,000",
+      "originalPrice": "47,000",
+      "ratings": 5
+    },
+    {
+      "id": 11,
+      "category": "Asus",
+      "image": "../assets/lap images/Asus Hero 1.jpg",
+      "model": "Asus Hero 1",
+      "price": "77,490",
+      "originalPrice": "80,000",
+      "ratings": 5
+    },
+    {
+      "id": 12,
+      "category": "HP",
+      "image": "../assets/lap images/HP ZenZ.jpg",
+      "model": "HP ZenZ",
+      "price": "80,400",
+      "originalPrice": "85,200",
+      "ratings": 4
+    },
+    {
+      "id": 13,
+      "category": "Macbook",
+      "image": "../assets/lap images/macbook 1Z.jpg",
+      "model": "Macbook 1Z",
+      "price": "98,600",
+      "originalPrice": "1,10,000",
+      "ratings": 5
+    },
+    {
+      "id": 14,
+      "category": "Dell",
+      "image": "../assets/lap images/Dell sonic.jpg",
+      "model": "Dell sonic 1",
+      "price": "92,400",
+      "originalPrice": "99,000",
+      "ratings": 4
+    },
+    {
+      "id": 15,
+      "category": "Lenovo",
+      "image": "../assets/lap images/Lenovo King1.jpg",
+      "model": "Lenovo King 1",
+      "price": "86,790",
+      "originalPrice": "89,990",
+      "ratings": 3
+    },
+    {
+      "id": 16,
+      "category": "HP",
+      "image": "../assets/lap images/hp pavilion 2.jpg",
+      "model": "HP Pavilion 2",
+      "price": "42,000",
+      "originalPrice": "48,800",
+      "ratings": 3
+    },
+    {
+      "id": 17,
+      "category": "Asus",
+      "image": "../assets/lap images/asus phoneix.jpg",
+      "model": "Asus Phoneix",
+      "price": "88,000",
+      "originalPrice": "93,000",
+      "ratings": 5
+    },
+    {
+      "id": 18,
+      "category": "Dell",
+      "image": "../assets/lap images/dell bee26.jpg",
+      "model": "Dell Bee 26",
+      "price": "43,590",
+      "originalPrice": "49,300",
+      "ratings": 4
+    },
+    {
+      "id": 19,
+      "category": "Acer",
+      "image": "../assets/lap images/acer max.jpg",
+      "model": "Acer Max",
+      "price": "77,000",
+      "originalPrice": "81,000",
+      "ratings": 4
+    },
+    {
+      "id": 20,
+      "category": "Lenovo",
+      "image": "../assets/lap images/lenovo 10.jpg",
+      "model": "Lenovo 10",
+      "price": "87,000",
+      "originalPrice": "93,800",
+      "ratings": 3
+    },
+    {
+      "id": 21,
+      "category": "Asus",
+      "image": "../assets/lap images/asus zen1.jpg",
+      "model": "Asus Zen 1",
+      "price": "92,450",
+      "originalPrice": "99,000",
+      "ratings": 5
+    },
+    {
+      "id": 22,
+      "category": "Macbook",
+      "image": "../assets/lap images/macbook air.jpg",
+      "model": "Macbook Air",
+      "price": "1,02,500",
+      "originalPrice": "1,10,000",
+      "ratings": 3
+    },
+    {
+      "id": 23,
+      "category": "HP",
+      "image": "../assets/lap images/hp think3.jpg",
+      "model": "HP Think 3",
+      "price": "58,000",
+      "originalPrice": "65,000",
+      "ratings": 3
+    },
+    {
+      "id": 24,
+      "category": "Lenovo",
+      "image": "../assets/lap images/lenovo 10i.jpg",
+      "model": "Lenovo 10i",
+      "price": "1,07,000",
+      "originalPrice": "1,15,000",
+      "ratings": 4
+    },
+    {
+      "id": 25,
+      "category": "Macbook",
+      "image": "../assets/lap images/macbook air pro.jpg",
+      "model": "Macbook Air Pro",
+      "price": "1,28,490",
+      "originalPrice": "1,32,990",
+      "ratings": 5
+    },
+    {
+      "id": 26,
+      "category": "Dell",
+      "image": "../assets/lap images/dell zion2.jpg",
+      "model": "Dell Zion 2",
+      "price": "56,500",
+      "originalPrice": "65,000",
+      "ratings": 3
+    },
+    {
+      "id": 27,
+      "category": "Acer",
+      "image": "../assets/lap images/acer legion.jpg",
+      "model": "Acer Legion",
+      "price": "1,10,000",
+      "originalPrice": "1,16,000",
+      "ratings": 5
+    },
+    {
+      "id": 28,
+      "category": "Asus",
+      "image": "../assets/lap images/asus g1.jpg",
+      "model": "Asus G1",
+      "price": "38,480",
+      "originalPrice": "45,000",
+      "ratings": 3
+    },
+    {
+      "id": 29,
+      "category": "Lenovo",
+      "image": "../assets/lap images/lenovo gforce.jpg",
+      "model": "Lenovo GForce",
+      "price": "75,000",
+      "originalPrice": "83,000",
+      "ratings": 4
+    },
+    {
+      "id": 30,
+      "category": "Macbook",
+      "image": "../assets/lap images/macbook pro 3.jpg",
+      "model": "Macbook Pro 3",
+      "price": "1,02,590",
+      "originalPrice": "1.10,000",
+      "ratings": 4
+    },
+    {
+      "category": "Acer",
+      "image": "C:\\fakepath\\Acer pro 2647.jpg",
+      "model": "Acer Pro 23",
+      "price": "40,000",
+      "originalPrice": "43,000",
+      "ratings": 4,
+      "id": 31
+    }
+  ],
+  "cart": [],
+  "orders": [
+    {
+      "name": "Manya S",
+      "address": "33/0, Bharathi Nagar, Chinnathirupathy, Salem-8",
+      "city": "Salem",
+      "state": "Tamilnadu",
+      "date": "Thu Jun 08 2023",
+      "time": "9:44:26 pm",
+      "totalPrice": 174000,
+      "userId": "1",
+      "orderStatus": "Cancelled",
+      "items": [
+        {
+          "productId": 1,
+          "userId": "1",
+          "image": "../assets/lap images/Dell inspiron 3511.jpg",
+          "name": "Dell inspiron 15 3511",
+          "price": "53,000",
+          "quantity": 1,
+          "id": 1
+        },
+        {
+          "productId": 2,
+          "userId": "1",
+          "image": "../assets/lap images/hp laptop 14s.jpg",
+          "name": "HP Laptop 14s-dq500",
+          "price": "62,000",
+          "quantity": 1,
+          "id": 2
+        },
+        {
+          "productId": 3,
+          "userId": "1",
+          "image": "../assets/lap images/asus zen1.jpg",
+          "name": "Asus VivoBook ultra k14",
+          "price": "59,000",
+          "quantity": 1,
+          "id": 3
+        }
+      ],
+      "id": 1
+    },
+    {
+      "name": "Riyashini",
+      "address": "33/0, Bharathi Nagar, Chinnathirupathy, Salem-8",
+      "city": "Salem",
+      "state": "Tamilnadu",
+      "date": "Thu Jun 08 2023",
+      "time": "11:39:33 pm",
+      "totalPrice": 118000,
+      "userId": "3",
+      "orderStatus": "Processing",
+      "items": [
+        {
+          "productId": 3,
+          "userId": "3",
+          "image": "../assets/lap images/asus zen1.jpg",
+          "name": "Asus VivoBook ultra k14",
+          "price": "59,000",
+          "quantity": 2,
+          "id": 1
+        }
+      ],
+      "id": 2
+    },
+    {
+      "name": "Manya S",
+      "address": "33/0, Bharathi Nagar, Chinnathirupathy, Salem-8",
+      "city": "Salem",
+      "state": "Tamilnadu",
+      "date": "Wed Jun 14 2023",
+      "time": "9:25:13 am",
+      "totalPrice": 67000,
+      "userId": "1",
+      "orderStatus": "Delivered",
+      "items": [
+        {
+          "productId": 4,
+          "userId": "1",
+          "image": "../assets/lap images/lenovo ideapad flex.jpg",
+          "name": "Lenovo IdeaPad Flex 5i",
+          "price": "67,000",
+          "quantity": 1,
+          "id": 1
+        }
+      ],
+      "id": 3
+    },
+    {
+      "name": "Manya S",
+      "address": "33/0, Bharathi Nagar, Chinnathirupathy, Salem-8",
+      "city": "Salem",
+      "state": "Tamilnadu",
+      "date": "Mon Jun 27 2023",
+      "time": "11:55:05 pm",
+      "totalPrice": 67000,
+      "orderStatus": "Cancelled",
+      "userId": "1",
+      "items": [
+        {
+          "productId": 4,
+          "userId": "1",
+          "image": "../assets/lap images/lenovo ideapad flex.jpg",
+          "name": "Lenovo IdeaPad Flex 5i",
+          "price": "67,000",
+          "quantity": 1,
+          "id": 1
+        }
+      ],
+      "id": 4
+    },
+    {
+      "name": "Manya",
+      "address": "salem",
+      "city": "salem",
+      "state": "tamilnadu",
+      "date": "Wed Jul 19 2023",
+      "time": "4:29:12 pm",
+      "totalPrice": 201000,
+      "orderStatus": "Pending",
+      "userId": "1",
+      "items": [
+        {
+          "productId": 10,
+          "userId": "1",
+          "image": "../assets/lap images/Acer pro 2647.jpg",
+          "name": "Acer pro 2647",
+          "price": "42,000",
+          "quantity": 1,
+          "id": 1
+        },
+        {
+          "productId": 1,
+          "userId": "1",
+          "image": "../assets/lap images/Dell inspiron 3511.jpg",
+          "name": "Dell inspiron 15 3511",
+          "price": "53,000",
+          "quantity": 3,
+          "id": 2
+        }
+      ],
+      "id": 5
+    },
+    {
+      "name": "Manya",
+      "address": "chinnathirupathy",
+      "city": "salem",
+      "state": "Tamil nadu",
+      "date": "Thu Aug 10 2023",
+      "time": "11:46:53 am",
+      "totalPrice": 239000,
+      "orderStatus": "Cancelled",
+      "userId": "1",
+      "items": [
+        {
+          "productId": 2,
+          "userId": "1",
+          "image": "../assets/lap images/hp laptop 14s.jpg",
+          "name": "HP Laptop 14s-dq500",
+          "price": "62,000",
+          "quantity": 3,
+          "id": 1
+        },
+        {
+          "productId": 1,
+          "userId": "1",
+          "image": "../assets/lap images/Dell inspiron 3511.jpg",
+          "name": "Dell inspiron 15 3511",
+          "price": "53,000",
+          "quantity": 1,
+          "id": 2
+        }
+      ],
+      "id": 6
+    },
+    {
+      "name": "Manya",
+      "address": "chinnathirupathy",
+      "city": "salem",
+      "state": "Tamil nadu",
+      "date": "Fri Mar 15 2024",
+      "time": "11:34:27 am",
+      "totalPrice": 54000,
+      "orderStatus": "Delivered",
+      "userId": "1",
+      "items": [
+        {
+          "productId": 1,
+          "userId": "1",
+          "image": "../assets/lap images/Dell inspiron 3511.jpg",
+          "name": "Dell inspiron 15 3511",
+          "price": "54,000",
+          "quantity": 1,
+          "id": 1
+        }
+      ],
+      "id": 7
+    }
+  ]
+}

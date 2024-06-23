@@ -1,0 +1,70 @@
+<app-navbar></app-navbar>
+  <div class="reg-container">
+  <div class="reg-box" id="reg-box">
+    <div class="title">
+        <h1>Create Account</h1>
+    </div>
+    <form name="form" id="form" [formGroup]="signUpForm" (ngSubmit)="submitRegister()">
+      <label>Your Name</label>
+      <div class="input-box">
+          <input type="text" formControlName="username" name="name"><br>
+          <div class=icon><i class="fa-solid fa-user"></i></div>
+          <div class="errror" *ngIf="signUpForm.controls['username'].invalid&&(signUpForm.controls['username'].dirty || signUpForm.controls['username'].touched)">
+            <span class="error" *ngIf="signUpForm.controls['username'].errors?.['required']" >Please enter your name</span>
+            <span class="error" *ngIf="signUpForm.controls['username'].errors?.['pattern']">Please enter valid name</span>
+            <span class="error" *ngIf="signUpForm.controls['username'].errors?.['hasRepetition']">Please enter valid name</span>
+          </div>
+      </div>
+      <label for="name ">Email</label>
+        <div class="input-box" id="input_box">
+            <input type="text"  formControlName="emailId" name="email" (keyup)="checkEmailExists()"><br>
+            <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+            <span class="error" *ngIf="emailExistsError">Email already exists</span>
+            <div *ngIf="signUpForm.controls['emailId'].invalid && (signUpForm.controls['emailId'].dirty || signUpForm.controls['emailId'].touched)">
+              <span class="error" *ngIf="signUpForm.controls['emailId'].errors?.['required']">Please enter email id</span>
+              <span class="error" *ngIf="signUpForm.controls['emailId'].errors?.['pattern']">Please enter valid email id</span>
+              <span class="error" *ngIf="signUpForm.controls['emailId'].errors?.['emailNameError']">Please enter valid email id</span>
+            </div>
+        </div>
+        <label>Mobile Number</label>
+        <div class="input-box">
+            <input type="text" formControlName="mobile" name="mobile"><br>
+            <div class="icon"><i class="fa-solid fa-phone"></i></div>
+            <div *ngIf="signUpForm.controls['mobile'].invalid && (signUpForm.controls['mobile'].dirty || signUpForm.controls['mobile'].touched)">
+              <span class="error" *ngIf="signUpForm.controls['mobile'].errors?.['required']">Please enter mobile number</span>
+              <span class="error" *ngIf="signUpForm.controls['mobile'].errors?.['pattern']">Please enter valid mobile number</span>
+            </div>
+        </div>
+        <label>Password</label>
+        <div class="input-box">
+            <input type="password" formControlName="password" name="Password"><br>
+            <div class="icon"><i class="fa-solid fa-lock"></i></div>
+            <div *ngIf="signUpForm.controls['password'].invalid && (signUpForm.controls['password'].dirty || signUpForm.controls['password'].touched)">
+              <span class="error" *ngIf="signUpForm.controls['password'].errors?.['required']">Please enter password</span>
+              <span class="error" *ngIf="signUpForm.controls['password'].errors?.['minlength']">Password must be atleast 6 characters</span>
+            </div>
+        </div>
+        <label>Confirm Password</label>
+        <div class="input-box">
+            <input type="password" formControlName="confirmPassword" name="confirmPassword"><br>
+            <div class="icon"><i class="fa-solid fa-lock"></i></div>
+            <div *ngIf="signUpForm.controls['confirmPassword'].invalid && (signUpForm.controls['confirmPassword'].dirty || signUpForm.controls['confirmPassword'].touched)">
+              <span class="error" *ngIf="signUpForm.controls['confirmPassword'].errors?.['required']">Please enter confirm password</span>
+              <span class="error" *ngIf="signUpForm.controls['confirmPassword'].errors?.['passwordValidators']">Please enter correct password</span>
+            </div>
+        </div>
+        <button type="submit" class="submit" id="submit">Register</button>
+      </form>
+      <p>Already have an account? <a routerLink="/login">Login here</a></p>
+  </div>
+</div>
+  <div class="popup" *ngIf="openPopup">
+      <div class="popup-content">
+          <p>Registered Successfully</p>
+          <div class="pop-buttons">
+              <button class="ok-button" id="ok"><a routerLink="/login">Ok</a></button>
+          </div>
+      </div>
+  </div>
+
+  <app-footer></app-footer>

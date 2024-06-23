@@ -1,0 +1,45 @@
+<body>
+  <nav>
+    <ul>
+      <li>
+        <a routerLink="/admin/dashboard" class="logo">
+          <img src="assets/lap images/lap-logo.jpg" alt="">
+          <span class="logo-name">Shopify</span>
+        </a>
+      </li>
+
+      <li><a routerLink="/admin/dashboard">
+        <i class="fa-solid fa-house"></i>
+        <span class="nav-item">Dashboard</span>
+      </a></li>
+      <li><a routerLink="/admin/users">
+        <i class="fa-solid fa-users"></i>
+        <span class="nav-item">Users</span>
+      </a></li>
+      <li><a routerLink="/admin/products">
+        <i class="fa-solid fa-laptop"></i>
+        <span class="nav-item">Products</span>
+      </a></li>
+      <li><a routerLink="/admin/add-products">
+        <i class="fa-solid fa-pen-to-square"></i>
+        <span class="nav-item">Add products</span>
+      </a></li>
+      <li><a routerLink="/admin/add-offers">
+        <i class="fa-solid fa-tag"></i>
+        <span class="nav-item">Add Offers</span>
+      </a></li>
+      <li><a routerLink="/admin/manage-orders">
+        <i class="fa-solid fa-database"></i>
+        <span class="nav-item">Orders</span>
+      </a></li>
+      <li><a routerLink="#">
+        <i class="fa-solid fa-comment"></i>
+        <span class="nav-item">Queries</span>
+      </a></li>
+      <li><a routerLink="#" class="logout" (click)="adminLogout()">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span class="nav-item">Logout</span>
+      </a></li>
+    </ul>
+  </nav>
+</body>

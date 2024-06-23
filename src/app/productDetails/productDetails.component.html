@@ -1,0 +1,121 @@
+<app-navbar></app-navbar>
+  <div class="container">
+    <div class="details-flex">
+    <div class="card-left">
+      <div class="main-image">
+        <div class="img-box">
+          <img [src]="finalProduct.image">
+          <!-- <img src="images/2.jpg">
+          <img src="images/3.jpg">
+          <img src="images/4.jpg"> -->
+        </div>
+      </div>
+      <div class="img-select">
+        <div class="img active">
+          <a href="#" data-id="1"><img [src]="finalProduct.image"></a>
+        </div>
+        <div class="img">
+          <a href="#" data-id="2"><img [src]="finalProduct.image"></a>
+        </div>
+        <div class="img">
+          <a href="#" data-id="3"><img [src]="finalProduct.image"></a>
+        </div>
+        <div class="img">
+          <a href="#" data-id="4"><img [src]="finalProduct.image"></a>
+        </div>
+        <div class="img">
+          <a href="#" data-id="5"><img [src]="finalProduct.image"></a>
+        </div>
+      </div>
+    </div>
+    <div class="card-right">
+        <div class="product-title">
+            <h2>{{finalProduct.model}}</h2>
+            <!-- <div class="return-policy">
+            <div class="return-title">
+              <div class="return-img"><img src="assets/lap images/returnProduct.jpg"></div>
+              <p>15 Days Return Period</p>
+            </div>
+          </div> -->
+        </div>
+        <div class="product-rating">
+            <span *ngFor="let i of [1, 2, 3, 4, 5]">
+              <i class="fa fa-star" [ngClass]="{'checked': i <= finalProduct.ratings}"></i>
+            </span>
+            <span class="review">(47 Reviews)</span>
+        </div>
+        <div class="product-price">
+            <span class="offer-price">&#8377; {{finalProduct.price}}</span>
+            <span class="sale-price">&#8377; {{finalProduct.originalPrice}}</span>
+        </div>
+        <p class="tax-details">Inclusive of all Taxes</p>
+        <div class="product-details">
+            <h3>Tech Specs</h3>
+            <div class="spec-info">
+              <span class="spec-img"><img src="assets/lap images/processor.jpg"></span>
+              <span class="spec-txt">12th Generation Intel® Core™ i5-1235U</span>
+            </div>
+            <div class="spec-info">
+              <span class="spec-img"><img src="assets/lap images/os.jpg"></span>
+              <span class="spec-txt">Windows 11 Home Single Language</span>
+            </div>
+            <div class="spec-info">
+              <span class="spec-img"><img src="assets/lap images/graphics.jpg"></span>
+              <span class="spec-txt">Intel® Iris® Xe Graphics</span>
+            </div>
+            <div class="spec-info">
+              <span class="spec-img"><img src="assets/lap images/ram.jpg"></span>
+              <span class="spec-txt">16 GB, 2 x 8 GB, DDR4, 3200 MHz</span>
+            </div>
+            <div class="spec-info">
+              <span class="spec-img"><img src="assets/lap images/ssd.jpg"></span>
+              <span class="spec-txt">512 GB, M.2, PCIe NVMe, SSD</span>
+            </div>
+            <div class="spec-info">
+              <span class="spec-img"><img src="assets/lap images/display.jpg"></span>
+              <span class="spec-txt">135.5-cm. display Full HD (1920X1200)</span>
+            </div>
+            <div class="spec-info">
+              <span class="spec-img"><img src="assets/lap images/weight.jpg"></span>
+              <span class="spec-txt">Starting at 1.54 kg</span>
+            </div>
+          </div>
+        <button class="btn-cart" (click)="addToCart(finalProduct)">Add Cart</button>
+    </div>
+  </div>
+  <hr>
+  <div class="about-support">
+    <div class="title">
+      <h1>Protect Your Purchase</h1>
+      <h3>It's nice to feel protected, especially at an affordable price</h3>
+    </div>
+    <div class="flex-content">
+      <div class="support-content">
+        <img src="../assets/lap images/premiumSupport.jpg">
+        <div class="support-title">
+          <h3>Premium Support</h3>
+          <p>Get help fast with access to 24x7 expert tech support over the phone or online for hardware issues
+            and software installation. If we can’t solve it remotely, we’ll send a technician to your place to fix it.</p>
+        </div>
+      </div>
+      <div class="support-content">
+        <img src="assets/lap images/damageSupport.jpg">
+        <div class="support-title">
+          <h3>Accidental Damage Service</h3>
+          <p>Stay worry-free, with protection from accidental drops, spills, and surges. Access to repairs is easy,
+            with support designed to get you up and running fast.</p>
+        </div>
+      </div>
+      <div class="support-content">
+        <img src="assets/lap images/premiumPlusSupport.jpg">
+        <div class="support-title">
+          <h3>Premium Support Plus</h3>
+          <p>Our most comprehensive support plan allows you to get the most out of your PC, with the least
+             of effort. From technology that predicts and fixes problems,
+             to extra protection with Accidental Damage Service, you’ll enjoy day and night support..</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <app-footer></app-footer>

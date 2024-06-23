@@ -1,0 +1,155 @@
+
+.payment-box {
+    margin: 8rem;
+    width: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 12px 3px rgba(0, 0, 0, 0.50);
+}
+
+.title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 100;
+    padding-top: 2px;
+    padding-bottom: 5px;
+}
+
+.tab {
+    text-align: center;
+}
+
+.tab button {
+    margin: 2rem;
+    margin-top: 10px;
+    width: 155px;
+    height: 120px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    transition: all .5s ease;
+    background: #f2f4f7;
+    color: #8a959c;
+    border: 2px solid #e8ebed;
+}
+
+.tab button span {
+    font-size: 25px;
+}
+
+.tab button p {
+    text-transform: uppercase;
+    font-size: 13px;
+    background: #f2f4f7;
+}
+
+.tab button:hover,
+.tab .btn-clicked:not(p) {
+    background-color: rgba(64, 179, 255, .1);
+    color: black;
+    border: 2px solid #40b3ff;
+}
+
+
+.payment-info {
+    display: flex;
+    justify-content: space-between;
+}
+.payment-info h4{
+    margin-bottom: 12px;
+}
+.field {
+    margin-bottom: 25px;
+}
+
+.full {
+    width: 100%;
+}
+
+.half {
+    width: calc(50% - 12px);
+}
+
+label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding-left: 2px;
+    margin-top:3px;
+    margin-bottom: 8px;
+}
+
+input {
+    padding: 12px;
+    border-radius: 6px;
+    border: 2px solid #e8ebed;
+    outline: none;
+    display: block;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.error{
+    padding-left: 5px;
+    color: rgb(199, 24, 24);
+    font-size: 14px;
+}
+select {
+    padding: 12px;
+    border-radius: 6px;
+    border: 2px solid #e8ebed;
+    display: block;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+   
+  }
+.half-field {
+    display: flex;
+    justify-content: space-between;
+}
+.title-flex{
+    display: flex;
+}
+.title-flex h4{
+    margin-top: 5px;
+    font-size: 18px;
+}
+.num {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    border: 2px solid #40b3ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-right: 12px;
+    font-size: 12px;
+}
+.card-actions{
+    display: flex;
+    justify-content: space-between;
+}
+.card-actions button{
+    margin: 1rem;
+    width: 130px;
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+    transition: all .5s ease;
+}
+.card-actions .button-2{
+    background-color: #40b3ff;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+}
+.card-actions .button-2:hover{
+    background-color:  #218fd9;
+}

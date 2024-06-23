@@ -1,0 +1,32 @@
+
+<div class="dashboard-container">
+  <app-adminNavbar></app-adminNavbar>
+  <section>
+    <div class="total-users">
+      <h2>Total users : {{users.length}}</h2>
+    </div>
+    <table class="user-table">
+      <thead>
+        <tr>
+          <th>S.No</th>
+          <th>User Name</th>
+          <th>Email Id</th>
+          <th>Mobile</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users; let i=index">
+          <td>{{i+1}}</td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.emailId }}</td>
+          <td>{{ user.mobile }}</td>
+          <td>
+            <div class="delete-btn"><i class="fa-solid fa-trash" (click)="removeUser(user.id)"></i></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+  </section>
+</div>

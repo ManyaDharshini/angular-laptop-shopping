@@ -1,0 +1,45 @@
+
+.dashboard-container{
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+.welcome-note{
+    margin-top: 100px;
+}
+.welcome-note h2{
+    color: #061c3d;
+    padding-bottom: 80px;
+    font-family: 'poppins', serif;
+    letter-spacing: 2px;
+}
+.dashboard-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 18px;
+}
+section{
+    justify-items: center;
+}
+.dashboard-box {
+  padding: 2em;
+  background-color: #e3e3e3;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  text-align: center;
+  width: 280px;
+  height: 200px;
+  line-height: 35px;
+}
+.dashboard-box h2,p{
+    font-family: 'poppins', serif;
+    font-size: 22px;
+    color: #181e27;
+}
+.fa-solid{
+    font-size: 30px;
+    color:#181e27;
+}
+.dashboard-number {
+  font-weight: bold;
+  margin: 10px 0 0;
+}

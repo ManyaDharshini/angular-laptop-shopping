@@ -1,0 +1,118 @@
+<app-navbar></app-navbar>
+<body>
+<div class="payment-box">
+  <div class="title"><h4>Choose payment method below</h4></div>
+  <div class="tab">
+  <button class="tablinks btn-clicked">
+          <span><i class="fa-solid fa-credit-card"></i></span><br><p>Credit Card</p></button>
+  <button class="tablinks">
+          <span><i class="fa-regular fa-credit-card"></i></span><br><p>Debit Card</p></button>
+  <button class="tablinks" >
+          <span><i class="fa-solid fa-money-check"></i></span><br><p>Net Banking</p></button>
+  <button class="tablinks">
+          <span><i class="fa-solid fa-money-bill-wave"></i></span><br><p>Cash On Delivery</p></button>
+</div>
+  <form [formGroup]="checkoutForm" (ngSubmit)="checkout()" id="form" method="post">
+  <div class="payment-info credit-card">
+      <div class="billing">
+          <div class="title-flex">
+              <div class="num">1</div>
+              <h4>Billing Info</h4>
+          </div>
+          <div class="field full">
+              <label for="name">Full Name</label>
+              <input id="name" type="text" placeholder="Full Name" formControlName="name">
+              <div class="errror" *ngIf="checkoutForm.controls['name'].invalid&&(checkoutForm.controls['name'].dirty || checkoutForm.controls['name'].touched)">
+                <span class="error" *ngIf="checkoutForm.controls['name'].errors?.['required']" >Please enter name</span>
+              </div>
+          </div>
+          <div class="field full">
+              <label for="address">Billing Address</label>
+              <input id="address" type="text" placeholder="Billing Address" formControlName="address">
+              <div class="errror" *ngIf="checkoutForm.controls['address'].invalid&&(checkoutForm.controls['address'].dirty || checkoutForm.controls['address'].touched)">
+                <span class="error" *ngIf="checkoutForm.controls['address'].errors?.['required']" >Please enter address</span>
+              </div>
+          </div>
+          <div class="field full">
+              <label for="phone">Phone</label>
+              <input id="phone" type="text" placeholder="Phone" formControlName="phone">
+              <div class="errror" *ngIf="checkoutForm.controls['phone'].invalid&&(checkoutForm.controls['phone'].dirty || checkoutForm.controls['phone'].touched)">
+                <span class="error" *ngIf="checkoutForm.controls['phone'].errors?.['required']" >Please enter phone number</span>
+              </div>
+          </div>
+          <div class="half-field">
+              <div class="field half">
+                  <label for="city">City</label>
+                  <input id="city" type="text" placeholder="City" formControlName="city">
+                  <div class="errror" *ngIf="checkoutForm.controls['city'].invalid&&(checkoutForm.controls['city'].dirty || checkoutForm.controls['city'].touched)">
+                    <span class="error" *ngIf="checkoutForm.controls['city'].errors?.['required']" >Please enter city</span>
+                  </div>
+              </div>
+              <div class="field half">
+                  <label for="state">State</label>
+                  <input id="state" type="text" placeholder="State" formControlName="state">
+                  <div class="errror" *ngIf="checkoutForm.controls['state'].invalid&&(checkoutForm.controls['state'].dirty || checkoutForm.controls['state'].touched)">
+                    <span class="error" *ngIf="checkoutForm.controls['state'].errors?.['required']" >Please enter state</span>
+                  </div>
+              </div>
+          </div>
+         
+      </div>
+      <div class="shipping">
+          <div class="title-flex">
+              <div class="num">2</div>
+              <h4>Credit Card Info</h4>
+          </div>
+          <div class="field full">
+              <label for="cardName">Card holder Name</label>
+              <input id="cardName" type="text" placeholder="Full Name" formControlName="cardName">
+              <div class="errror" *ngIf="checkoutForm.controls['cardName'].invalid&&(checkoutForm.controls['cardName'].dirty || checkoutForm.controls['cardName'].touched)">
+                <span class="error" *ngIf="checkoutForm.controls['cardName'].errors?.['required']" >Please enter card name</span>
+              </div>
+          </div>
+          <div class="field full">
+              <label for="cardNumber">Card Number</label>
+              <input id="cardNumber" type="text" placeholder="1234-5678-9012-3456" formControlName="cardNumber">
+              <div class="errror" *ngIf="checkoutForm.controls['cardNumber'].invalid&&(checkoutForm.controls['cardNumber'].dirty || checkoutForm.controls['cardNumber'].touched)">
+                <span class="error" *ngIf="checkoutForm.controls['cardNumber'].errors?.['required']" >Please enter card number</span>
+              </div>
+          </div>
+          <div class="field full">
+              <label for="cvv">CCV Number</label>
+              <input id="cvv" type="text" placeholder="468" formControlName="cvv">
+              <div class="errror" *ngIf="checkoutForm.controls['cvv'].invalid&&(checkoutForm.controls['cvv'].dirty || checkoutForm.controls['cvv'].touched)">
+                <span class="error" *ngIf="checkoutForm.controls['cvv'].errors?.['required']" >Please enter cvv</span>
+              </div>
+          </div>
+          <div class="half-field">
+              <div class="field half">
+                  <label for="month">Exp. Month</label>
+                  <input id="month" type="text" placeholder="12" formControlName="month">
+                  <div class="errror" *ngIf="checkoutForm.controls['month'].invalid&&(checkoutForm.controls['month'].dirty || checkoutForm.controls['month'].touched)">
+                    <span class="error" *ngIf="checkoutForm.controls['month'].errors?.['required']" >Please enter month</span>
+                  </div>
+              </div>
+              <div class="field half">
+                  <label for="year">Exp. Year</label>
+                  <input id="year" type="text" placeholder="19" formControlName="year">
+                  <div class="errror" *ngIf="checkoutForm.controls['year'].invalid&&(checkoutForm.controls['year'].dirty || checkoutForm.controls['year'].touched)">
+                    <span class="error" *ngIf="checkoutForm.controls['year'].errors?.['required']" >Please enter year</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+  <div class="card-actions">
+      <div class="flex-start">
+          <button class="button-1" routerLink="/products">Return to Store</button>
+      </div>
+      <div class="flex-end">
+          <button type="submit" class="button-2" id="submit" >Pay <span id="pay-amount" ></span></button>
+      </div>
+  </div>
+ 
+
+</form>
+</div>
+</body>
+<app-footer></app-footer>

@@ -1,0 +1,38 @@
+<div class="dashboard-container">
+  <app-adminNavbar></app-adminNavbar>
+  <section>
+    <div class="total-products">
+      <h2>Total products : {{products.length}}</h2>
+    </div>
+<table class="product-list">
+  <thead>
+    <tr>
+      <th>S.No</th>
+      <th>Image</th>
+      <th>Category</th>
+      <th>Title</th>
+      <th>Price</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products; let i=index">
+      <td>{{ i+1 }}</td>
+      <td><img [src]="product.image" alt="Product Image" width="100"></td>
+      <td>{{ product.category }}</td>
+      <td>{{ product.model }}</td>
+      <td>{{ product.price }}</td>
+      <td><a  routerLink="/admin/edit-product/{{product.id}}">
+        <div class="btn edit-btn">
+        <i class="fa-solid fa-pen-to-square"></i></div>
+        </a>
+      </td>
+      <td><div class="btn delete-btn">
+        <i class="fa-solid fa-trash" (click)="removeProduct(product.id)"></i></div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+  </section>
+</div>

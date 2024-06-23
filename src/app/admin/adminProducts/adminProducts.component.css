@@ -1,0 +1,43 @@
+.dashboard-container{
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+.total-products{
+    margin:2em;
+    margin-left: 0;
+}
+.total-products h2{
+    font-family: 'poppins',serif;
+}
+.product-list {
+    width: 90%;
+    border-collapse: collapse;
+  }
+  
+.product-list th,
+.product-list td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+.product-list th{
+    background-color: #f2f2f2;
+    color: #333;
+    text-align: center;   
+ }
+
+.product-list tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+.btn {
+    cursor: pointer;
+}
+.edit-btn{
+    color:rgb(34, 80, 115);
+}
+.delete-btn{
+    color: rgb(214, 23, 23);
+}
+  

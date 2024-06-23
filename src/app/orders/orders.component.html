@@ -1,0 +1,56 @@
+<app-navbar></app-navbar>
+    <div class="empty-orders" *ngIf="orders.length==0">
+        <img src="assets/lap images/emptyOrder.jpg">
+        <div class="content">
+            <p>No Orders Yet</p>
+            <div class="order-button">
+              <a routerLink="/cart">Order Now</a>
+            </div>
+          </div>
+    </div>
+    <div class="container" *ngIf="isCheckout && orders.length>0">
+        <h2>My Orders</h2>
+        <h3>Thanks for your orders!!</h3>
+        <div *ngFor="let order of orders" class="order">
+            <div class="center">
+          <div class="order-items">
+            <div *ngFor="let item of order.items" class="order-item">
+            <div class="image">
+              <img [src]="item.image" alt="Product Image" class="product-image">
+            </div>
+              <div class="name">
+                <p class="product-name">{{ item.name }}</p>
+              </div>
+              <div class="qty">
+                <p class="product-qty">Qty: {{ item.quantity}}</p>
+              </div>
+              <div class="price">
+                <p class="product-price">Price: {{ convertToNumber(item.price) * item.quantity | currency:'INR'}}</p>
+              </div>
+            </div>
+            <div class="status-cancel">
+            <p class="order-status"><b>Order Status:</b> {{ order.orderStatus }} </p>
+            <p class="cancel-order" *ngIf="order.orderStatus !== 'Cancelled' && order.orderStatus !== 'Delivered' "
+            (click)="cancelOrder(order.id,order.date, order.time)">Cancel</p>
+           </div>
+            <div class="order-details">
+                <div class="details-1">
+                    <h4>Order Details</h4>
+                    <ul>
+                        <li>Order Id: {{order.id}}</li>
+                        <li>Order Date: {{order.date}}</li>
+                        <li>Order Time: {{order.time}}</li>
+
+                    </ul>
+                </div>
+                <div class="details-2">
+                    <h4>Total paid: {{order.totalPrice  | currency:'INR'}} </h4>
+                    <p>Delivery charges: Free</p>
+                </div>
+            </div>
+          </div>
+        </div>
+        </div>
+
+    </div>
+<app-footer></app-footer>

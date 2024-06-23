@@ -1,0 +1,20 @@
+.dashboard-container{
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+.offer-container{
+    margin-top: 40px;
+    width:450px;
+    background-color: rgb(245, 245, 245);
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;    
+    border-radius: 10px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.offer-content h3{
+    color: rgb(181, 22, 33);
+    cursor: pointer;
+}

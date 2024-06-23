@@ -1,0 +1,77 @@
+<app-navbar></app-navbar>
+<body>
+<div class="login-box" id="login-box">
+  <div class="title">
+      <h1>Login</h1>
+  </div>
+  <form name="form" id="form" [formGroup]="loginForm" (ngSubmit)="submitLogin()" autocomplete="off">
+      <label for="name ">Email</label>
+      <div class="input-box" id="input_box">
+          <input type="text"  formControlName="emailId"><br>
+          <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+          <div class="errror" *ngIf="loginForm.controls['emailId'].invalid && (loginForm.controls['emailId'].dirty || loginForm.controls['emailId'].touched)">
+            <span class="error" *ngIf="loginForm.controls['emailId'].errors?.['required']" >Please enter your email</span>
+            <span class="error" *ngIf="loginForm.controls['emailId'].errors?.['pattern']">Please enter valid email id</span>
+          </div>
+      </div>
+      <label for="password">Password</label>
+      <div class="input-box">
+          <input type="password" formControlName="password">
+          <div class="icon"><i class="fa-solid fa-lock"></i></div>
+          <div class="errror" *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['emailId'].touched)">
+            <span class="error" *ngIf="loginForm.controls['password'].errors?.['required']" >Please enter your password</span>
+            <span class="error" *ngIf="loginForm.controls['password'].errors?.['minlength']" >Password must be atleast 6 characters </span>
+          </div>
+      </div>
+      <div class="forgot-pswd" id="forgot-pswd">
+          <p><a routerLink="/changePassword">Forgot password?</a></p>
+      </div>
+      <div *ngIf="invalidUser">
+          <span class="invalidUserError"><p>Invalid email or password</p></span>
+      </div>
+      <button type="submit" class="submit" id="submit">Login</button>
+  </form>
+  <div class="register">
+      <p>Don't have an account? <a routerLink="/register">Register here</a></p>
+  </div>
+</div>
+<!-- <div class="popup" *ngIf="openPopup">
+  <div class="popup-content">
+      <div class="success">
+          <p>Login Success</p>
+      </div>
+      <div class="pop-buttons">
+          <button class="ok-button" id="ok"><a (click)="goToHome()">Ok</a></button>
+      </div>
+  </div>
+</div> -->
+<!-- <div class="forgotPassword-popup" >
+ <div class="forgotPassword-box" *ngIf="openResetPswd">
+  <div class="pswd-content">
+      <div class="title">
+          <h1>Reset your password</h1>
+      </div>
+      <form name="form" id="form" [formGroup]="forgotPswdForm" (ngSubmit)="resetPswd()" autocomplete="off">
+        <label for="name ">Email</label>
+        <div class="input-box" id="input_box">
+            <input type="text"  formControlName="email"><br>
+            <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="errror" *ngIf="forgotPswdForm.controls['email'].invalid && (forgotPswdForm.controls['email'].dirty || forgotPswdForm.controls['email'].touched)">
+              <span class="error" *ngIf="forgotPswdForm.controls['email'].errors?.['required']" >Please enter your email</span>
+            </div>
+        </div>
+        <label for="name ">Password</label>
+        <div class="input-box" id="input_box">
+            <input type="text"  formControlName="password"><br>
+            <div class="icon"><i class="fa-solid fa-lock"></i></div>
+            <div class="errror" *ngIf="forgotPswdForm.controls['password'].invalid && (forgotPswdForm.controls['password'].dirty || forgotPswdForm.controls['password'].touched)">
+              <span class="error" *ngIf="forgotPswdForm.controls['password'].errors?.['required']" >Please enter new password</span>
+            </div>
+        </div>
+        <button type="submit" class="submit" id="submit">Reset</button>
+        </form>
+  </div>
+</div>
+</div> -->
+</body>
+<app-footer></app-footer>

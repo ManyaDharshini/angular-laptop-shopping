@@ -1,0 +1,70 @@
+<app-navbar></app-navbar>
+<body>
+    <div class="search-category">
+    <div class="searchbox">
+        <input type="text" class="search" [(ngModel)]="searchTerm" (input)="filterProducts()" 
+        placeholder="Search you want... ">
+        <span class="search-icon">
+            <i class="fa fa-search"></i>
+        </span>
+    </div>
+    <div class="select-category">
+    <select [(ngModel)]="selectedCategory" (change)="filterProducts()">
+        <option value="">All Categories</option>
+        <option value="Acer">Acer</option>
+        <option value="Asus">Asus</option>
+        <option value="Dell">Dell</option>
+        <option value="HP">HP</option>
+        <option value="Lenovo">Lenovo</option>
+        <option value="Macbook">Macbook</option>
+      </select>
+    </div>
+</div>
+
+<div *ngIf="offerStatus" class="offerStatus">
+    <marquee behavior="scroll" direction="left">
+<div class="flex-text">
+    <p class="dancing-text">Offer is live now</p>
+    <p class="dancing-text">Offer is live now</p>
+    <p class="dancing-text">Offer is live now</p>
+</div>
+</marquee>
+  </div>
+
+  <div *ngIf="!productNotFound" class="product-container" id="product-container">
+    <div class="box" data-item="dell" *ngFor="let product of filteredProducts" >
+        <a routerLink="description/{{product.model}}">
+        <div class=productid data-productid="1">
+            <div class="title">{{product.category}}</div>
+            <div class="image">
+                <img [src]="product.image" class="lap-img" width="330" height="200">
+            </div>
+            <div class="text">
+                <div class="star-ratings">
+                    <span *ngFor="let i of [1, 2, 3, 4, 5]">
+                      <i class="fa fa-star" [ngClass]="{'checked': i <= product.ratings}"></i>
+                    </span>
+                  </div>
+                <div class="lap-model">{{product.model}}<br></div>
+                <div class="lap-price">
+                    <span class="offer-price">&#8377; {{product.price}}</span>
+                    <span class="sale-price">&#8377; {{product.originalPrice}}</span>
+                </div>
+                 
+            </div>
+        </div>
+    </a>
+        <button class="cart-button" (click)="addToCart(product)">
+            <div class="add-cart">
+                <span>Add to cart </span><i class="fa-solid fa-cart-shopping"></i>
+            </div>
+        </button>
+    </div>
+    </div>
+</body>
+<div *ngIf="filteredProducts.length==0" class="notFound">
+    <div class="content">
+        <img src="assets/lap images/productNotFound.jpg">
+    </div>
+</div>
+<app-footer></app-footer>

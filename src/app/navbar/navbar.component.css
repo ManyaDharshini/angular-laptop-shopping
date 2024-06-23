@@ -1,0 +1,195 @@
+
+body{
+    background-image: linear-gradient(to right top, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff);
+}
+header{
+  position: fixed;
+  top:0; left:0; right:0;
+  height: 70px;
+  background:#181E27;
+  padding:0px 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width:100%;
+  z-index: 1000;
+}
+header .logo-name{
+  margin-left: 72px;
+  font-family: 'EB Garamond', serif;
+  letter-spacing: 2px;
+  font-weight: bolder;
+  font-size:30px;
+  color:#66fcf1;
+  text-transform: capitalize;
+  position: fixed;
+}
+header .logo img{
+  width: 70px;
+  height: 50px;
+}
+header nav{
+  margin-top: 6px;
+}
+header .navbar ul{
+  list-style: none;
+}
+header .navbar ul li{
+  position: relative;
+  float:left;
+}
+header .navbar ul li a{
+  font-family: 'Roboto Slab', serif;
+  font-size: 18px;
+  color: #ffffff;
+  display: block;
+}
+header .navbar ul li a:not(.login){
+  padding: 12px 20px;
+}
+/* header .navbar ul li a:hover{
+  background: #f5f5f5;
+  color: #181E27;
+  border-radius: 15px;
+} */
+.hover::after{
+  content: '';
+  width:0;
+  height:3px;
+  background-color: #66fcf1;
+  margin-top: 3px;
+  margin-bottom:-11px;
+  display: block;
+}
+.hover:hover::after{
+  width:100%;
+  color: #66fcf1;
+  transition:width 0.4s linear;
+}
+header .navbar ul li a:hover{
+  color: #66fcf1;
+}
+header .login:hover{
+  color: #F5F5F5;
+}
+header .navbar ul li ul{
+  position: absolute;
+  left:0;
+  width:200px;
+  background: #181E27;
+  display: none;
+}
+header .navbar ul li ul li{
+  padding-bottom: 5px;
+  width:100%;
+}
+header .navbar ul li:hover > ul{
+  display: initial;
+}
+
+header .navbar .login{
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 5px;
+  margin-left: 250px;
+  background-color: #181E27;
+  color: #ffffff;
+  border-radius: 7px;
+  border: 2px solid #66fcf1;
+  padding: 7px 10px;
+}
+header .navbar .login span{
+  padding-left: 4px;
+}
+.logout{
+  cursor: pointer;
+}
+.cart{
+  margin-top: 3px;
+  margin-left: 4px;
+  text-align: center;
+}
+.cart-icon{
+  font-size: 22px;
+}
+.cart-count{
+  position: absolute;
+  background-color: #66fcf1;
+  color:#000000;
+  top: -1px;
+  right: 0;
+  padding: 3px;
+  height: 20px;
+  width: 20px;
+  line-height:20px ;
+  border-radius: 50%;
+  text-align: center;
+}
+.cart-count p{
+  margin-top:-3px;
+  font-size: 14px;
+}
+.icon{
+  padding-right:5px;
+  font-size: 20px;
+}
+/*------------Responsive Navbar------------ */
+#menu-bar{
+  display: none;
+}
+header label{
+  font-size: 20px;
+  color:#66fcf1;
+  cursor:pointer;
+  display: none;
+}
+@media(max-width:1200px){
+  header{
+      padding: 20px;
+  }
+  header label{
+      display: initial;
+      margin-left: 70%;
+  }
+  header .navbar{
+      position: absolute;
+      top:100%;
+      left:0;right:0;
+      margin-left: 0;
+      margin-top: 0;
+      background: #181E27;
+      display: none;
+  }
+
+  header .navbar ul li{
+    margin-left: 12px;
+      width:100%;
+  }
+  header .navbar ul li ul{
+      position: relative;
+      width:100%;
+  }
+  header .navbar ul li ul li{
+    padding-left: 5px;
+      background: #181E27;
+  }
+  #menu-bar:checked ~.navbar{
+      display: initial;
+  }
+  header .navbar .login{
+      text-transform: none;
+      background-color: #181E27;
+      color: #ffffff;
+      margin-left: 2px;
+      border-radius: 10px;
+      border: 2px solid #181E27;
+  }
+  .hover:hover::after{
+    display: none;
+  }
+  .icon{
+      display: none;
+  }
+
+
+}
